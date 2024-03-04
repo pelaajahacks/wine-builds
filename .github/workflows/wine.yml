@@ -30,9 +30,11 @@ jobs:
           libdbus-1-dev \
           libfontconfig-dev \
           libfreetype-dev \
+          libfreetype6-dev:i386 \
           libgl-dev \
           libunwind-dev \
           libx11-dev \
+          libx11-dev:i386 \
           libxcomposite-dev \
           libxcursor-dev \
           libxfixes-dev \
