@@ -49,7 +49,7 @@ jobs:
           libudev-dev \
           libvulkan-dev \
           libkrb5-dev:amd64=1.19.2-2ubuntu0.3 \
-          krb5-multidev:amd64=1.19.2-2ubuntu0.3 \
+          krb5-multidev:amd64=1.19.2-2 \
           libusb-1.0-0-dev \
           libv4l-dev \
           libxkbcommon-dev \
@@ -91,7 +91,7 @@ jobs:
           libudev-dev:i386 \
           libvulkan-dev:i386 \
           libkrb5-dev:i386=1.19.2-2ubuntu0.3 \
-          krb5-multidev:i386=1.19.2-2ubuntu0.3 \
+          krb5-multidev:i386=1.19.2-2 \
           libusb-1.0-0-dev:i386 \
           libv4l-dev:i386 \
           libxkbcommon-dev:i386 \
