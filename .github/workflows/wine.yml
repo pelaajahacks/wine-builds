@@ -67,7 +67,7 @@ jobs:
           libgphoto2-dev \
           libsdl2-dev \
           libcapi20-dev \
-          libcups2-dev
+          libcups2-dev \
           ccache
 
     - name: 'Configure ccache'
