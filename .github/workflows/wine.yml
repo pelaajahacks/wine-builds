@@ -23,6 +23,8 @@ jobs:
           curl \
           gcc-multilib \
           g++-multilib \
+          python3-apt \
+          python3-bcrypt \
           flex \
           bison \
           libasound2-dev \
@@ -32,6 +34,7 @@ jobs:
           libfreetype-dev \
           libgl-dev \
           libegl-dev \
+          libgl1-mesa-dev \
           libunwind-dev \
           libx11-dev \
           libxcomposite-dev \
@@ -63,6 +66,7 @@ jobs:
           libsdl2-dev \
           libcapi20-dev \
           libcups2-dev \
+          nvidia-opencl-dev
           \
           libasound2-dev:i386 \
           libpulse-dev:i386 \
@@ -71,6 +75,7 @@ jobs:
           libfreetype-dev:i386 \
           libgl-dev:i386 \
           libegl-dev:i386 \
+          libgl1-mesa-dev:i386 \
           libunwind-dev:i386 \
           libx11-dev:i386 \
           libxcomposite-dev:i386 \
