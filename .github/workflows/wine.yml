@@ -41,6 +41,7 @@ jobs:
           libxi-dev \
           libxrandr-dev \
           libxrender-dev \
+          libxrender-dev:i386 \
           libxext-dev \
           libgstreamer1.0-dev \
           libgstreamer-plugins-base1.0-dev \
