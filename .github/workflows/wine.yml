@@ -24,7 +24,6 @@ jobs:
           gcc-multilib \
           g++-multilib \
           python3-apt \
-          python3-bcrypt \
           flex \
           bison \
           libasound2-dev \
@@ -66,7 +65,7 @@ jobs:
           libsdl2-dev \
           libcapi20-dev \
           libcups2-dev \
-          nvidia-opencl-dev
+          nvidia-opencl-dev \
           \
           libasound2-dev:i386 \
           libpulse-dev:i386 \
