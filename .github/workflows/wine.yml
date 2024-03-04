@@ -30,21 +30,15 @@ jobs:
           libdbus-1-dev \
           libfontconfig-dev \
           libfreetype-dev \
-          libfreetype6-dev:i386 \
           libgl-dev \
           libunwind-dev \
           libx11-dev \
-          libx11-dev:i386 \
           libxcomposite-dev \
-          libxcomposite-dev:i386 \
           libxcursor-dev \
           libxfixes-dev \
-          libxfixes-dev:i386 \
           libxi-dev \
           libxrandr-dev \
-          libxrandr-dev:i386 \
           libxrender-dev \
-          libxrender-dev:i386 \
           libxext-dev \
           libgstreamer1.0-dev \
           libgstreamer-plugins-base1.0-dev \
@@ -69,6 +63,45 @@ jobs:
           libsdl2-dev \
           libcapi20-dev \
           libcups2-dev \
+          \
+          libasound2-dev:i386 \
+          libpulse-dev:i386 \
+          libdbus-1-dev:i386 \
+          libfontconfig-dev:i386 \
+          libfreetype-dev:i386 \
+          libgl-dev:i386 \
+          libunwind-dev:i386 \
+          libx11-dev:i386 \
+          libxcomposite-dev:i386 \
+          libxcursor-dev:i386 \
+          libxfixes-dev:i386 \
+          libxi-dev:i386 \
+          libxrandr-dev:i386 \
+          libxrender-dev:i386 \
+          libxext-dev:i386 \
+          libgstreamer1.0-dev:i386 \
+          libgstreamer-plugins-base1.0-dev:i386 \
+          libosmesa6-dev:i386 \
+          libudev-dev:i386 \
+          libvulkan-dev:i386 \
+          libkrb5-dev \
+          libusb-1.0-0-dev:i386 \
+          libv4l-dev:i386 \
+          libxkbcommon-dev:i386 \
+          libxkbregistry-dev:i386 \
+          libwayland-dev:i386 \
+          libxxf86vm-dev:i386 \
+          libxinerama-dev:i386 \
+          nvidia-opencl-dev:i386 \
+          libpcap-dev:i386 \
+          libpcsclite-dev:i386 \
+          libsane-dev:i386 \
+          libgettextpo-dev:i386 \
+          libgnutls28-dev:i386 \
+          libgphoto2-dev:i386 \
+          libsdl2-dev:i386 \
+          libcapi20-dev:i386 \
+          libcups2-dev:i386 \
           ccache
 
     - name: 'Configure ccache'
