@@ -38,6 +38,7 @@ jobs:
           libxcomposite-dev \
           libxcursor-dev \
           libxfixes-dev \
+          libxfixes-dev:i386 \
           libxi-dev \
           libxrandr-dev \
           libxrandr-dev:i386 \
@@ -55,6 +56,19 @@ jobs:
           libxkbcommon-dev \
           libxkbregistry-dev \
           libwayland-dev \
+          libxxf86vm-dev \
+          libxinerama-dev \
+          nvidia-opencl-dev \
+          ocl-id-opencl-dev \
+          libpcap-dev \
+          libpcsclite-dev \
+          libsane-dev \
+          libgettextpo-dev \
+          libgnutls28-dev \
+          libgphoto2-dev \
+          libsdl2-dev \
+          libcapi20-dev \
+          libcups2-dev
           ccache
 
     - name: 'Configure ccache'
