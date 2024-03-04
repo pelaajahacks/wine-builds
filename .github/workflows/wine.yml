@@ -40,6 +40,7 @@ jobs:
           libxfixes-dev \
           libxi-dev \
           libxrandr-dev \
+          libxrandr-dev:i386 \
           libxrender-dev \
           libxrender-dev:i386 \
           libxext-dev \
