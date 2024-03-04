@@ -14,7 +14,7 @@ jobs:
         echo "WINE_ARCHIVE=${{ github.workspace }}/wine-vinegarhq-build-${{ env.WINE_VERSION }}.tar.xz" >> $GITHUB_ENV
         echo "WINE_PREFIX=${{ github.workspace }}/wine-vinegarhq-build-${{ env.WINE_VERSION }}" >> $GITHUB_ENV
         echo "PATH=/usr/lib/ccache:/usr/local/opt/ccache/libexec:$PATH" >> $GITHUB_ENV
-
+        sudo dpkg --add-architecture i386 \
         sudo apt update -y
         sudo apt install \
           lib32z1 \
