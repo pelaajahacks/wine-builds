@@ -48,6 +48,7 @@ jobs:
           libosmesa6-dev \
           libudev-dev \
           libvulkan-dev \
+          libkrb5-dev \
           libusb-1.0-0-dev \
           libv4l-dev \
           libxkbcommon-dev \
