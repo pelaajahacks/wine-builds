@@ -89,7 +89,7 @@ jobs:
           libosmesa6-dev:i386 \
           libudev-dev:i386 \
           libvulkan-dev:i386 \
-          libkrb5-dev \
+          libkrb5-dev:i386 \
           libusb-1.0-0-dev:i386 \
           libv4l-dev:i386 \
           libxkbcommon-dev:i386 \
