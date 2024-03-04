@@ -36,6 +36,7 @@ jobs:
           libx11-dev \
           libx11-dev:i386 \
           libxcomposite-dev \
+          libxcomposite-dev:i386 \
           libxcursor-dev \
           libxfixes-dev \
           libxfixes-dev:i386 \
