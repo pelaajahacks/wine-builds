@@ -32,6 +32,7 @@ jobs:
           libfreetype-dev \
           libgl-dev \
           libegl-dev \
+          libgl1-mesa-dev \
           libunwind-dev \
           libx11-dev \
           libxcomposite-dev \
@@ -54,7 +55,6 @@ jobs:
           libwayland-dev \
           libxxf86vm-dev \
           libxinerama-dev \
-          nvidia-opencl-dev \
           libpcap-dev \
           libpcsclite-dev \
           libsane-dev \
@@ -72,6 +72,7 @@ jobs:
           libfreetype-dev:i386 \
           libgl-dev:i386 \
           libegl-dev:i386 \
+          libgl1-mesa-dev:i386 \
           libunwind-dev:i386 \
           libx11-dev:i386 \
           libxcomposite-dev:i386 \
