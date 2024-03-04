@@ -59,6 +59,8 @@ jobs:
       run: |
         git clone https://gitlab.winehq.org/wine/wine.git --depth 1 \
           --branch wine-${{ env.WINE_VERSION }}
+        mkdir -p wine/wine-64
+        mkdir -p wine/wine-32
 
     - name: 'Apply Wine Staging patchset'
       run: |
@@ -73,11 +75,11 @@ jobs:
           patch -p1 < $p
         done
 
-    - name: 'Configure Wine'
-      working-directory: wine
+    - name: 'Configure Wine 64'
+      working-directory: wine/wine-64
       run: |
         mkdir -p ${{ env.WINE_PREFIX }}
-        ./configure \
+        ../configure \
           CC='ccache gcc' \
           x86_64_CC='ccache x86_64-w64-mingw32-gcc' \
           CFLAGS='-O3 -pipe -march=x86-64-v2 -mpclmul -mavx' \
@@ -108,12 +110,53 @@ jobs:
           --with-krb5 \
           --with-usb \
           --with-v4l2
+    - name: 'Configure Wine 32'
+      working-directory: wine/wine-32
+      run: |
+        mkdir -p ${{ env.WINE_PREFIX }}
+        ../configure \
+          CC='ccache gcc' \
+          x86_64_CC='ccache x86_64-w64-mingw32-gcc' \
+          CFLAGS='-O3 -pipe -march=x86-64-v2 -mpclmul -mavx' \
+          CXXFLAGS='-O3 -pipe -march=x86-64-v2 -mpclmul -mavx' \
+          CROSSCFLAGS='-O3 -pipe -march=x86-64-v2 -mpclmul -mavx' \
+          --prefix=${{ env.WINE_PREFIX }} \
+          --with-wine64=../wine-64 \
+          --host=x86_64 \
+          --build=x86_64 \
+          --with-mingw=ccache x86_64-w64-mingw64-gcc \
+          --disable-win16 \
+          --disable-tests \
+          --with-alsa \
+          --with-pulse \
+          --with-dbus \
+          --with-fontconfig \
+          --with-freetype \
+          --with-opengl \
+          --with-wayland \
+          --with-x \
+          --with-xcomposite \
+          --with-xfixes \
+          --with-xinput2 \
+          --with-xrandr \
+          --with-xrender \
+          --with-gstreamer \
+          --with-vulkan \
+          --with-krb5 \
+          --with-usb \
+          --with-v4l2
 
-    - name: 'Build Wine'
-      working-directory: wine
+    - name: 'Build Wine 64'
+      working-directory: wine/wine-64
       run: make -j$(($(nproc) + 1))
-    - name: 'Install Wine'
-      working-directory: wine
+    - name: 'Build Wine 32'
+      working-directory: wine/wine-32
+      run: make -j$(($(nproc) + 1))
+    - name: 'Install Wine 64'
+      working-directory: wine/wine-64
+      run: make install LDCONFIG=/bin/true UPDATE_DESKTOP_DATABASE=/bin/true
+    - name: 'Install Wine 32'
+      working-directory: wine/wine-32
       run: make install LDCONFIG=/bin/true UPDATE_DESKTOP_DATABASE=/bin/true
 
     - name: 'Strip Wine'
