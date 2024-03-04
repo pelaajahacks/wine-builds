@@ -21,7 +21,10 @@ jobs:
           git \
           build-essential \
           curl \
-          mingw-w64 \
+          gcc-multilib \
+          g++-multilib \
+          flex \
+          bison \
           libasound2-dev \
           libpulse-dev \
           libdbus-1-dev \
@@ -82,15 +85,11 @@ jobs:
         mkdir -p ${{ env.WINE_PREFIX }}
         ../configure \
           CC='ccache gcc' \
-          x86_64_CC='ccache x86_64-w64-mingw32-gcc' \
           CFLAGS='-O3 -pipe -march=x86-64-v2 -mpclmul -mavx' \
           CXXFLAGS='-O3 -pipe -march=x86-64-v2 -mpclmul -mavx' \
           CROSSCFLAGS='-O3 -pipe -march=x86-64-v2 -mpclmul -mavx' \
           --prefix=${{ env.WINE_PREFIX }} \
           --enable-win64 \
-          --host=x86_64 \
-          --build=x86_64 \
-          --with-mingw=ccache x86_64-w64-mingw64-gcc \
           --disable-win16 \
           --disable-tests \
           --with-alsa \
@@ -117,15 +116,11 @@ jobs:
         mkdir -p ${{ env.WINE_PREFIX }}
         ../configure \
           CC='ccache gcc' \
-          x86_64_CC='ccache x86_64-w64-mingw32-gcc' \
-          CFLAGS='-O3 -pipe -march=x86-64-v2 -mpclmul -mavx' \
-          CXXFLAGS='-O3 -pipe -march=x86-64-v2 -mpclmul -mavx' \
-          CROSSCFLAGS='-O3 -pipe -march=x86-64-v2 -mpclmul -mavx' \
+          CFLAGS='-O3 -pipe -march=native -mpclmul -mavx' \
+          CXXFLAGS='-O3 -pipe -march=native -mpclmul -mavx' \
+          CROSSCFLAGS='-O3 -pipe -march=native -mpclmul -mavx' \
           --prefix=${{ env.WINE_PREFIX }} \
           --with-wine64=../wine-64 \
-          --host=x86_64 \
-          --build=x86_64 \
-          --with-mingw=ccache x86_64-w64-mingw64-gcc \
           --disable-win16 \
           --disable-tests \
           --with-alsa \
