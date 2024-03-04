@@ -49,6 +49,7 @@ jobs:
           libudev-dev \
           libvulkan-dev \
           libkrb5-dev \
+          krb5-multidev \
           libusb-1.0-0-dev \
           libv4l-dev \
           libxkbcommon-dev \
