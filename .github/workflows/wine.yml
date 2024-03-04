@@ -209,11 +209,6 @@ jobs:
       working-directory: wine/wine-32
       run: make install LDCONFIG=/bin/true UPDATE_DESKTOP_DATABASE=/bin/true
 
-    - name: 'Strip Wine'
-      working-directory: ${{ env.WINE_PREFIX }}
-      run: |
-        x86_64-w64-mingw32-strip --strip-unneeded lib/wine/x86_64-windows/*.dll
-
     - name: Make artifacts
       run: |
         cd $(dirname ${{ env.WINE_PREFIX }})
